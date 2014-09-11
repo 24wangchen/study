@@ -1,1 +1,2 @@
-console.log打印一个对象的时候，是对象的一个引用，使用不当可能在调试中被坑，可使用直接值如console.log(data.msg)代替console.log(data)，或者打断点调试
+console.log打印一个对象的时候，是对象的一个引用，使用不当可能在调试中被坑。
+可使用直接值如console.log(data.msg)代替console.log(data)，或者打断点调试。
