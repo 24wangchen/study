@@ -33,6 +33,6 @@ seajs.config = function(configData) {
   return seajs
 }
 
-var prev = data[key]
+源码如上，其中var prev = data[key]
 关键点在if (prev && isObject(prev))，此处判断prev属性，如果是Object，证明是引用复制，故改变prev，同时就把data值改变了。
 (ps:困扰了3天，最终用debugger解决了)
