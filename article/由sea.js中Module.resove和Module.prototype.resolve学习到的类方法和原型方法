@@ -13,12 +13,14 @@ michael.protype.test = function(){
 
 var a = new michael('chen');
 a.test();
-/* 此处打印为
+/* 
+  此处打印为
   chen
   prototype
  */
 michael.test('chen');
-/* 此处打印为
+/* 
+  此处打印为
   chen
  */
 综上，类方法是不用生成实例就可以使用的方法，原型方法主要用于原有对象的扩展使用，并且基于实例使用。
