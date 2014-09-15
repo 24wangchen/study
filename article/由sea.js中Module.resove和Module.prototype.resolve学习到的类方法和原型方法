@@ -1,0 +1,24 @@
+在sea.js中存在Module.resolve和Module.prototype.resolve两个方法
+Module.resolve称为类方法，Module.prototype.resolve称为原型方法，具体不同举例说明：
+var michael = function(msg){
+  this.msg = msg;
+}
+michael.test = function(msg){
+  console.log(msg);
+}
+michael.protype.test = function(){
+  wc.test(this.msg);
+  console.log('prototype');
+}
+
+var a = new michael('chen');
+a.test();
+/* 此处打印为
+  chen
+  prototype
+ */
+michael.test('chen');
+/* 此处打印为
+  chen
+ */
+综上，类方法是不用生成实例就可以使用的方法，原型方法主要用于原有对象的扩展使用，并且基于实例使用。
